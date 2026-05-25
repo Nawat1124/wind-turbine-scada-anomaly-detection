@@ -1,0 +1,36 @@
+# raw / processed data
+data/
+raw_data/
+processed_data/
+*.csv
+*.parquet
+*.pkl
+*.npz
+
+# model files
+*.h5
+*.keras
+*.pt
+*.pth
+models/
+checkpoints/
+
+# outputs
+outputs/
+results/
+figures/
+logs/
+
+# python / notebook
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# environments
+.env
+.venv/
+venv/
+
+# system
+.DS_Store
+Thumbs.db
