@@ -1,5 +1,6 @@
+```text
 ┌──────────────────────────────────────────────────────────────┐
-│ Start: Set paths and reconstruction parameters               │ 
+│ Start: Set paths and reconstruction parameters               │
 │                                                              │
 │ DATA_ROOT = raw CARE Wind Farm B datasets                    │
 │ OUT_DIR   = reconstructed output directory                   │
@@ -10,10 +11,10 @@
                                 │
                                 v
 ┌──────────────────────────────────────────────────────────────┐
-│ Load raw CARE event/session CSV files                        │    
+│ Load raw CARE event/session CSV files                        │
 │                                                              │
 │ For each CSV:                                                │
-│ - read with separator ";"                                    │
+│ - read with separator ";"                                   │
 │ - parse asset_id                                             │
 │ - parse time_stamp                                           │
 │ - sort by time_stamp                                         │
@@ -72,7 +73,7 @@
                                 │
                                 v
 ┌──────────────────────────────────────────────────────────────┐
-│ Build pair_diag                                               │
+│ Build pair_diag                                              │
 │                                                              │
 │ pair_diag records:                                           │
 │ - asset_id                                                   │
@@ -83,7 +84,6 @@
 │ - stitching status                                           │
 │ - inferred order                                             │
 │ - train-prediction conflict count                            │
-│                                                              │
 └───────────────────────────────┬──────────────────────────────┘
                                 │
                                 v
@@ -105,7 +105,7 @@
                                     │
                                     v
 ┌──────────────────────────────────────────────────────────────┐
-│ Align reconstructed_time                                      │
+│ Align reconstructed_time                                     │
 │                                                              │
 │ For CLEAN_STITCH, shift timestamps so duplicated blocks      │
 │ share one physical timeline.                                 │
@@ -149,8 +149,7 @@
 │ - map prediction interval to reconstructed physical rows     │
 │ - record start/end index and start/end time                  │
 │                                                              │
-│                                                              │
-│ Purpose: preserve event structure                           │
+│ Purpose: preserve event structure                            │
 └───────────────────────────────┬──────────────────────────────┘
                                 │
                                 v
@@ -166,7 +165,7 @@
                                 │
                                 v
 ┌──────────────────────────────────────────────────────────────┐
-│ Save minimal v3 artifacts                                    │                                     │
+│ Save minimal v3 artifacts                                    │
 │                                                              │
 │ Save:                                                        │
 │ - df_reconstructed.parquet                                   │
@@ -174,15 +173,16 @@
 │ - event_mapping.parquet                                      │
 │ - figures/asset_*_reconstructed_timeline.png                 │
 │                                                              │
-│ Do not save unnecessary debug artifacts                      │                                   │
+│ Do not save unnecessary debug artifacts                      │
 └───────────────────────────────┬──────────────────────────────┘
                                 │
                                 v
 ┌──────────────────────────────────────────────────────────────┐
-│ Final sanity checks                                           │
+│ Final sanity checks                                          │
 │                                                              │
 │ Check:                                                       │
 │ - physical_order_index is not missing                        │
 │ - reconstructed_time is not missing                          │
 │ - row_lineage_map maps original rows                         │
 └──────────────────────────────────────────────────────────────┘
+```
