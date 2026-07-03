@@ -1,5 +1,5 @@
 ┌──────────────────────────────────────────────────────────────┐
-│ Start: Set Paths                               │
+│ Start: Set Paths                                             │
 └───────────────────────────────┬──────────────────────────────┘
                                 │
                                 v
@@ -15,7 +15,7 @@
                                 │
                                 v
 ┌──────────────────────────────────────────────────────────────┐
-│ Basic sanity checks                                           │
+│ Basic sanity checks                                          │
 │                                                              │
 │ - required columns exist                                     │
 │ - no duplicated asset_id + physical_order_index              │
