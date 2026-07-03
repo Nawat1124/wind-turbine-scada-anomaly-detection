@@ -90,7 +90,6 @@
                                 v
 ┌──────────────────────────────────────────────────────────────┐
 │ IQR outlier diagnostics                                      │
-│ IQR 异常值诊断                                                │
 │                                                              │
 │ Fit rows: normal_safe_mask                                   │
 │ Fitting rows: 443248                                         │
