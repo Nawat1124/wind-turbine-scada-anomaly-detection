@@ -9,6 +9,16 @@ This project uses CARE Wind Farm B and treats early fault warning as an event-le
 The raw CARE Wind Farm B dataset is not included in this repository. Users should download the CARE benchmark data from the original source and place the Wind Farm B files in the expected local data directory before running the notebooks.
 
 Large intermediate files such as `.parquet`, `.pkl`, model outputs, figures, and result folders are excluded from version control.
+
+## Data source
+This project uses the CARE wind turbine anomaly detection benchmark, focusing on Wind Farm B.
+
+Official dataset sources:
+- Fordatis: https://doi.org/10.24406/fordatis/343
+- Zenodo: https://zenodo.org/doi/10.5281/zenodo.10958774
+
+The raw dataset is not included in this repository. Users should download the CARE data from the official source and place the Wind Farm B files in the expected local data directory before running the notebooks.
+
 ## Key challenge
 The raw CARE Wind Farm B event files contain duplicated physical SCADA sequences across sessions. Directly merging the files can cause train-prediction leakage. This project reconstructs an asset-level physical timeline and keeps row-level lineage mappings to preserve event correspondence.
 
