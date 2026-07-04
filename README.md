@@ -48,3 +48,4 @@ The raw CARE Wind Farm B event files contain duplicated physical SCADA sequences
     ├── 01_reconstruction_pipeline_overview.md
     ├── 02_data_preprocessing_overview.md
     └── 03_eda_normal_operating_space_overview.md
+```
